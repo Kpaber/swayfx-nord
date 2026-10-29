@@ -14,6 +14,7 @@ input "type:pointer" {
 input "type:touchpad" {
 	tap enabled
 	natural_scroll enabled
+#	dwt disabled
 }
 
 output HDMI-A-1 resolution 1920x1080 scale 2 position 0 0 
@@ -27,11 +28,11 @@ set $mod_alt Mod1
 set $term foot
 set $rofi rofi -show drun -location 1 -theme $HOME/.config/rofi/themes/drun.rasi
 
-bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1 2%+
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.3 2%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
-bindsym $mod_alt+f3 exec wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1 2%+
+bindsym $mod_alt+f3 exec wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.3 2%+
 bindsym $mod_alt+f2 exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym $mod_alt+f1 exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
@@ -96,8 +97,8 @@ bindsym $mod+Ctrl+Down mark --add "source"; focus down; swap container with mark
 bindsym --to-code $mod_alt+f fullscreen toggle
 
 #bindsym $mod_alt+s layout stacking
-#bindsym --to-code $mod_alt+w layout tabbed
-#bindsym --to-code $mod_alt+t layout toggle split
+bindsym --to-code $mod_alt+w layout tabbed
+bindsym --to-code $mod_alt+t layout toggle split
 
 bindsym $mod+Shift+space focus mode_toggle 
 bindsym --to-code $mod_alt+s floating toggle 
@@ -180,29 +181,29 @@ animation_duration_ms 250
 
 gaps inner 12px
 
-#font pango:JetBrainsMono Nerd Font Mono 12
+font pango:JetBrainsMono Nerd Font 12
 
-layer_effects "waybar" shadows enable; corner_radius 4
+layer_effects "waybar" blur enable; shadows enable
 layer_effects "rofi" blur enable; shadows enable; corner_radius 4
 corner_radius 4
 
-blur enable
-blur_xray disable
-blur_passes 3
-blur_radius 5
-blur_noise 0.1
+#blur enable
+#blur_xray disable
+#blur_passes 3
+#blur_radius 5
+#blur_noise 0.1
 
 shadows enable
 shadows_on_csd enable
 shadow_color #11151c80  
 
-default_border pixel 4
-default_floating_border pixel 4
+default_border pixel 2
+default_floating_border pixel 2
 
 #class						border		backgr		text		indicator	child_border
 client.focused				#d08770		#d08770 	#1f2531 	#d08770 	#d08770
-client.focused_inactive 	#2e3440  	#2e3440     #1f2531		#d08770    	#d8dee950
-client.unfocused        	#d8dee9  	#d8dee9     #1f2531  	#d08770    	#d8dee950
+client.focused_inactive 	#2e3440  	#d8dee950     #1f2531		#d08770    	#d8dee950
+client.unfocused        	#d8dee950  	#d8dee950     #1f2531  	#d08770    	#d8dee950
 
 #client.urgent           	#bf616a		#ebcb8b 	#1f2531 	#d8dee9   	#d8dee9
 

@@ -18,6 +18,82 @@
 	- Приложения считывающие системную тему
 - Автостарт из TTY, если вы пользуетесь bash
 
+## Структура
+`
+.dotfiles/
+├── .bash_aliases
+├── .bash_profile
+├── .bashrc
+├── .config
+│   ├── dunst
+│   │   ├── dunstrc -> /home/kpaber/.config/dunst/schemes/dunstrc-light
+│   │   └── schemes
+│   │       ├── dunstrc-dark
+│   │       └── dunstrc-light
+│   ├── fastfetch
+│   │   ├── config.jsonc
+│   │   └── old_config.jsonc
+│   ├── foot
+│   │   ├── foot.ini -> /home/kpaber/.config/foot/schemes/foot-light.ini
+│   │   └── schemes
+│   │       ├── foot-dark.ini
+│   │       └── foot-light.ini
+│   ├── gtk-3.0
+│   ├── gtk-4.0
+│   ├── Kvantum
+│   │   ├── kvantum.kvconfig
+│   │   └── Nordic
+│   ├── rofi
+│   │   ├── config.rasi
+│   │   └── themes
+│   │       ├── config.rasi -> /home/kpaber/.config/rofi/themes/schemes/config-light.rasi
+│   │       ├── drun.rasi -> /home/kpaber/.config/rofi/themes/schemes/drun-light.rasi
+│   │       ├── power.rasi -> /home/kpaber/.config/rofi/themes/schemes/power-light.rasi
+│   │       └── schemes
+│   │           ├── config-dark.rasi
+│   │           ├── config-light.rasi
+│   │           ├── drun-dark.rasi
+│   │           ├── drun-light.rasi
+│   │           ├── power-dark.rasi
+│   │           └── power-light.rasi
+│   ├── sway
+│   │   ├── config
+│   │   ├── img
+│   │   │   ├── swappy-20261024_155606.png
+│   │   │   ├── swappy-20261024_155627.png
+│   │   │   ├── swappy-20261024_155654.png
+│   │   │   ├── swappy-20261024_155706.png
+│   │   │   ├── swappy-20261024_155722.png
+│   │   │   ├── swappy-20261024_160008.png
+│   │   │   ├── swappy-20261024_160019.png
+│   │   │   └── swappy-20261024_160043.png
+│   │   └── workspaces
+│   ├── swaylock
+│   │   └── config
+│   └── waybar
+│       ├── config.jsonc
+│       ├── schemes
+│       │   ├── style-dark.css
+│       │   └── style-light.css
+│       └── style.css -> /home/kpaber/.config/waybar/schemes/style-light.css
+├── .gtkrc-2.0
+├── .local
+│   ├── bin
+│   │   ├── current-wallpaper
+│   │   ├── dunst-history-rofi.sh
+│   │   ├── power.sh
+│   │   ├── rofi-clipboard.sh
+│   │   └── theme-switcher
+│   └── share
+│       ├── fonts
+│       │   ├── JetBrainsMono
+│       ├── themes
+│       │   └── Nordic-darker-v40
+│       └── wallpapers
+│           ├── wallpaper-dark.png
+│           └── wallpaper-light.png
+└── README.md
+`
 ## Программы(зависимости)
 - [swayfx](https://github.com/wlrfx/swayfx)
 - [swaylock-effects](https://github.com/hboetes/swaylock-effects)
@@ -53,7 +129,7 @@
 ```bash
 git clone https://github.com/Kpaber/swayfx-nord.git
 #Далее переходим в папку и выполняем stow
-cd swayfx-dotfiles
+cd swayfx-nord
 stow .
 ```
 - Следующим шагом советую выполнить `theme-switcher`, т.к из-за

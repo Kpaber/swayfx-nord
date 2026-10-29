@@ -8,7 +8,7 @@
     max_icon_size = 48
     frame_width = 2
 	frame_color = "#d08770"
-    font = "JetBrainsMono Nerd Font Mono 14"
+    font = "JetBrainsMono Nerd Font Mono 12"
     gap_size = 1
     foreground = "#1f2531"
     background = "#eceff4"

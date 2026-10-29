@@ -17,7 +17,7 @@ window{
 	border-color: @bg;
 	border-radius: 4px;
 	//spacing: 16px;
-	x-offset: -12;
+	x-offset: -8;
 	y-offset: 8;	
 }
 
@@ -46,7 +46,7 @@ listview{
 }
 
 element{
-	border: 4px;
+	border: 2px;
 	border-radius: 4px;
 	border-color: @bg;
 	padding: 4px;

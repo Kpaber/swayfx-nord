@@ -1,7 +1,6 @@
-/* Палитра цветов из вашего Polybar */
 @define-color background #2e3440;
-@define-color background-alt #4c566a;
-@define-color background-alt2 #3b4252;
+@define-color background-alt2 #4c566a;
+@define-color background-alt #3b4252;
 @define-color main #d08770;      /* было #d08770 — теперь глубже, читается на фоне */
 @define-color text #e5e9f0;
 
@@ -17,49 +16,68 @@
 window#waybar {
 	background-color: @background;
 	color: @text;
-	font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font";
-	font-size: 20px;
-	font-weight: bold;
-	border-radius: 4px;
+	font-family: "JetBrainsMono Nerd Font";
+	font-size: 18;
+	font-weight: 700;
+}
+
+/* Внешний контейнер всплывающего окна */
+tooltip {
+    background-color: @background;
+    border-radius: 4px;
+}
+
+/* Текст внутри тултипа */
+tooltip label {
+    color: @text;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16;
+    font-weight: 500;
 }
 
 /* Эмуляция отступов между модулями (module-margin = 8px) */
 #custom-logo,
 #workspaces,
-#custom-weather,
 #clock,
+#custom-weather,
+#tray,
 #battery,
 #wireplumber,
 #backlight,
 #language,
-#network,
 #bluetooth,
-#custom-power,
-#tray {
+#network,
+#custom-power {
 	padding: 0 8px;
 }
 
-/*
 .modules-left,
 .modules-center,
 .modules-right {
-	background-color: @background-alt2;
+	background-color: @background-alt;
 	border-radius: 4px;
 }
-*/
 
 /* Модуль ЛОГО */
 #custom-logo {
 	color: @red;
 	font-size: 16px;
-	margin: 0 4px;
+	margin: 0 8px;
 }
+
+/* Модуль ПОГОДЫ: классы приходят из scripts/weather.sh */
+#custom-weather.clear { color: @yellow; }
+#custom-weather.cloudy { color: @background-alt2; }
+#custom-weather.rain { color: @blue; }
+#custom-weather.snow { color: @white; }
+#custom-weather.fog { color: @background-alt2; }
+#custom-weather.thunder { color: @magenta; }
+#custom-weather.error { color: @red; }
 
 /* Рабочие столы (xworkspaces аналог) */
 #workspaces button {
-	color: @background-alt;
+	color: @background-alt2;
 	padding: 0 4px;
-	border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
@@ -70,7 +88,6 @@ window#waybar {
 #workspaces button.urgent {
 	color: @red;
 }
-
 
 /* Цвета для остальных модулей из Polybar */
 #clock {
@@ -119,21 +136,19 @@ window#waybar {
 
 #custom-power {
 	color: @red;
-	margin: 0 4px;
+	margin: 0 8px;
 }
-
-/*#tray {
-	background-color: @background-alt;
-	border-radius: 4px;
-	margin: 4px 0;
-}*/
 
 #bluetooth {
 	color: @yellow;
-	margin: 0 8px; 
 }
 
 #bluetooth.disabled {
 	color: @red;
-	margin: 0 8px; 
 }
+/*#tray {
+	background-color: @background-alt;
+	border-radius: 4px;
+	margin: 4px 0;
+}
+*/

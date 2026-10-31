@@ -8,7 +8,7 @@
 ![фото](.config/sway/img/swappy-20261031_224455.png)
 ![фото](.config/sway/img/swappy-20261031_224143.png)
 ![фото](.config/sway/img/swappy-20261031_224535.png)
-*[Остальные скриншоты](https://github/kpaber/swayfx/nord/.config/sway/img)*
+*[Остальные скриншоты](https://github.com/Kpaber/swayfx-nord/tree/main/.config/sway/img)*
 
 Этим "*окружением*" я пользуюсь на каждодневной основе и стараюсь
 сохранять его минималистичность и простоту(устройства). Конфиги довольно просто

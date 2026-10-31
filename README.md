@@ -25,7 +25,7 @@
 - Автостарт из TTY, если вы пользуетесь bash
 
 ## Структура
-`
+```
 .dotfiles/
 ├── .bash_aliases
 ├── .bash_profile
@@ -88,7 +88,7 @@
 │           ├── wallpaper-dark.png
 │           └── wallpaper-light.png
 └── README.md
-`
+```
 ## Программы(зависимости)
 - [swayfx](https://github.com/wlrfx/swayfx)
 - [swaylock-effects](https://github.com/hboetes/swaylock-effects)

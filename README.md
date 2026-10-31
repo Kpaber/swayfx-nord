@@ -26,35 +26,40 @@
 
 ## Структура
 ```
-.dotfiles/
+.dotfiles
 ├── .bash_aliases
 ├── .bash_profile
 ├── .bashrc
 ├── .config
 │   ├── dunst
-│   │   ├── dunstrc -> /home/kpaber/.config/dunst/schemes/dunstrc-light
+│   │   ├── dunstrc -> ~/.config/dunst/schemes/dunstrc-dark
 │   │   └── schemes
 │   │       ├── dunstrc-dark
 │   │       └── dunstrc-light
 │   ├── fastfetch
-│   │   ├── config.jsonc
-│   │   └── old_config.jsonc
+│   │   └── config.jsonc
 │   ├── foot
-│   │   ├── foot.ini -> /home/kpaber/.config/foot/schemes/foot-light.ini
+│   │   ├── foot.ini -> ~/.config/foot/schemes/foot-dark.ini
 │   │   └── schemes
 │   │       ├── foot-dark.ini
 │   │       └── foot-light.ini
 │   ├── gtk-3.0
 │   ├── gtk-4.0
+│   │   ├── gtk.css -> ~/.config/gtk-4.0/schemes/gtk-dark.css
+│   │   ├── schemes
+│   │   │   └── gtk-dark.css -> ~/.local/share/themes/Nordic-darker-v40/gtk-4.0/gtk.css
+│   │   └── settings.ini
 │   ├── Kvantum
 │   │   ├── kvantum.kvconfig
 │   │   └── Nordic
+│   │       ├── Nordic.kvconfig
+│   │       └── Nordic.svg
 │   ├── rofi
 │   │   ├── config.rasi
 │   │   └── themes
-│   │       ├── config.rasi -> /home/kpaber/.config/rofi/themes/schemes/config-light.rasi
-│   │       ├── drun.rasi -> /home/kpaber/.config/rofi/themes/schemes/drun-light.rasi
-│   │       ├── power.rasi -> /home/kpaber/.config/rofi/themes/schemes/power-light.rasi
+│   │       ├── config.rasi -> ~/.config/rofi/themes/schemes/config-dark.rasi
+│   │       ├── drun.rasi -> ~/.config/rofi/themes/schemes/drun-dark.rasi
+│   │       ├── power.rasi -> ~/.config/rofi/themes/schemes/power-dark.rasi
 │   │       └── schemes
 │   │           ├── config-dark.rasi
 │   │           ├── config-light.rasi
@@ -64,6 +69,21 @@
 │   │           └── power-light.rasi
 │   ├── sway
 │   │   ├── config
+│   │   └── img
+│   │       ├── swappy-20261031_223931.png
+│   │       ├── swappy-20261031_224004.png
+│   │       ├── swappy-20261031_224019.png
+│   │       ├── swappy-20261031_224025.png
+│   │       ├── swappy-20261031_224033.png
+│   │       ├── swappy-20261031_224119.png
+│   │       ├── swappy-20261031_224130.png
+│   │       ├── swappy-20261031_224136.png
+│   │       ├── swappy-20261031_224143.png
+│   │       ├── swappy-20261031_224150.png
+│   │       ├── swappy-20261031_224442.png
+│   │       ├── swappy-20261031_224455.png
+│   │       ├── swappy-20261031_224535.png
+│   │       └── swappy-20261031_224544.png
 │   ├── swaylock
 │   │   └── config
 │   └── waybar
@@ -71,10 +91,13 @@
 │       ├── schemes
 │       │   ├── style-dark.css
 │       │   └── style-light.css
-│       └── style.css -> /home/kpaber/.config/waybar/schemes/style-light.css
+│       └── style.css -> ~/.config/waybar/schemes/style-dark.css
+├── .gitignore
 ├── .gtkrc-2.0
 ├── .local
 │   ├── bin
+│   │   ├── current-wallpaper
+│   │   ├── dunst-history-rofi.sh
 │   │   ├── power.sh
 │   │   ├── rofi-clipboard.sh
 │   │   ├── theme-switcher
@@ -85,8 +108,7 @@
 │       ├── themes
 │       │   └── Nordic-darker-v40
 │       └── wallpapers
-│           ├── wallpaper-dark.png
-│           └── wallpaper-light.png
+│           ├── 11356529.jpg
 └── README.md
 ```
 ## Программы(зависимости)

@@ -1,8 +1,14 @@
 # **Мои дотфайлы для композитора swayfx**
-![Мой рабочий стол](.config/sway/img/swappy-20261024_160043.png)
-![фото](.config/sway/img/swappy-20261024_160019.png)
-![фото](.config/sway/img/swappy-20261024_155654.png)
-*больше фото внутри репозитория*
+![фото](.config/sway/img/swappy-20261031_224544.png)
+![фото](.config/sway/img/swappy-20261031_224442.png)
+![фото](.config/sway/img/swappy-20261031_224004.png)
+![фото](.config/sway/img/swappy-20261031_223931.png)
+![фото](.config/sway/img/swappy-20261031_224019.png)
+![фото](.config/sway/img/swappy-20261031_224025.png)
+![фото](.config/sway/img/swappy-20261031_224455.png)
+![фото](.config/sway/img/swappy-20261031_224143.png)
+![фото](.config/sway/img/swappy-20261031_224535.png)
+*[Остальные скриншоты](https://github/kpaber/swayfx/nord/.config/sway/img)*
 
 Этим "*окружением*" я пользуюсь на каждодневной основе и стараюсь
 сохранять его минималистичность и простоту(устройства). Конфиги довольно просто
@@ -58,16 +64,6 @@
 │   │           └── power-light.rasi
 │   ├── sway
 │   │   ├── config
-│   │   ├── img
-│   │   │   ├── swappy-20261024_155606.png
-│   │   │   ├── swappy-20261024_155627.png
-│   │   │   ├── swappy-20261024_155654.png
-│   │   │   ├── swappy-20261024_155706.png
-│   │   │   ├── swappy-20261024_155722.png
-│   │   │   ├── swappy-20261024_160008.png
-│   │   │   ├── swappy-20261024_160019.png
-│   │   │   └── swappy-20261024_160043.png
-│   │   └── workspaces
 │   ├── swaylock
 │   │   └── config
 │   └── waybar
@@ -79,14 +75,13 @@
 ├── .gtkrc-2.0
 ├── .local
 │   ├── bin
-│   │   ├── current-wallpaper
-│   │   ├── dunst-history-rofi.sh
 │   │   ├── power.sh
 │   │   ├── rofi-clipboard.sh
-│   │   └── theme-switcher
+│   │   ├── theme-switcher
+│   │   └── weather.sh
 │   └── share
 │       ├── fonts
-│       │   ├── JetBrainsMono
+│       │   └── JetBrainsMono
 │       ├── themes
 │       │   └── Nordic-darker-v40
 │       └── wallpapers
@@ -97,24 +92,28 @@
 ## Программы(зависимости)
 - [swayfx](https://github.com/wlrfx/swayfx)
 - [swaylock-effects](https://github.com/hboetes/swaylock-effects)
-- autotiling
-- cliphist
 - rofi
 - waybar
 - dunst
 - foot
 - kvantummanager
-- stow
-- xdg-desktop-portal-wlr{gtk}
+- Зависимости для корректной работы
+	- xdg-desktop-portal-wlr{gtk}
+	- pipewire
+	- iwd
+	- stow
+	- cliphist
+	- autotiling
+	- jq
 - И лично я использую
 	- xfce4-power-manager
 	- blueman-manager
 	- iwgtk
 	- pavucontrol
 	- grim + slurp + swappy
-- Но вы можете использовать что-то вроде
-	- [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth)
-	- [rofi-wifi-menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
+	- thunar
+	- mpv
+	- kew
 
 ## Перед установкой важно сказать, что это сугубо личные дотфайлы
 Я делал их для себя, под свое использование, под свой сетап, поэтому вам,
@@ -163,6 +162,7 @@ flatpak {--user} override --filesystem=xdg-config/Kvantum:ro \
 | `$mod` + `Return` | Терминал (**foot**) |
 | `$mod` + `B` | Браузер (**Firefox**) |
 | `$mod` + `C` | История буфера обмена(rofi-clipboard.sh) |
+| `$mod` + + `$mod_alt` + `C` | Очистить историю буфера |
 | `$mod` + `F` | Файловый менеджер (**Thunar**) |
 | `$mod` + `V` | Настройки звука (**pavucontrol**) |
 | `$mod` + `I` | Настройки Wi-Fi (**iwgtk**) |
@@ -188,6 +188,8 @@ flatpak {--user} override --filesystem=xdg-config/Kvantum:ro \
 | `$mod` + `L` | Заблокировать экран (**swaylock**) |
 | `$mod_alt` + `F` | Развернуть/свернуть окно на весь экран |
 | `$mod_alt` + `S` | Включить/выключить плавающий режим (`floating toggle`) |
+| `$mod_alt` + `W` | Включить tabbed |
+| `$mod_alt` + `T` | Включить tiled |
 | `$mod` + `Shift` + `Space`| Переключить фокус между плавающими/тайловыми окнами |
 
 **Навигация и перемещение окон**

@@ -1,16 +1,16 @@
 @define-color background #2e3440;
-@define-color background-alt2 #4c566a;
 @define-color background-alt #3b4252;
-@define-color main #d08770;      /* было #d08770 — теперь глубже, читается на фоне */
+@define-color background-alt2 #4c566a;
+@define-color main #d08770;      
 @define-color text #e5e9f0;
 
-@define-color red #bf616a;       /* было #bf616a */
-@define-color green #a3be8c;     /* было #a3be8c — стал заметно темнее */
-@define-color yellow #ebcb8b;    /* было #ebcb8b — иначе на светлом почти не видно */
-@define-color blue #81a1c1;      /* было #81a1c1 */
-@define-color magenta #b48ead;   /* было #b48ead */
-@define-color cyan #8fbcbb;      /* было #8fbcbb */
-@define-color white #eceff4;     /* белый оставляем как белый */
+@define-color red #bf616a;       
+@define-color green #a3be8c;     
+@define-color yellow #ebcb8b;    
+@define-color blue #81a1c1;      
+@define-color magenta #b48ead;   
+@define-color cyan #8fbcbb;      
+@define-color white #eceff4; 
 
 /* Общие стили для бара */
 window#waybar {
@@ -24,7 +24,7 @@ window#waybar {
 /* Внешний контейнер всплывающего окна */
 tooltip {
     background-color: @background;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 /* Текст внутри тултипа */
@@ -48,31 +48,22 @@ tooltip label {
 #bluetooth,
 #network,
 #custom-power {
-	padding: 0 8px;
+	margin: 0 8px;
+	
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
 	background-color: @background-alt;
-	border-radius: 4px;
+	border-radius: 8px;
 }
 
 /* Модуль ЛОГО */
 #custom-logo {
 	color: @red;
 	font-size: 16px;
-	margin: 0 8px;
 }
-
-/* Модуль ПОГОДЫ: классы приходят из scripts/weather.sh */
-#custom-weather.clear { color: @yellow; }
-#custom-weather.cloudy { color: @background-alt2; }
-#custom-weather.rain { color: @blue; }
-#custom-weather.snow { color: @white; }
-#custom-weather.fog { color: @background-alt2; }
-#custom-weather.thunder { color: @magenta; }
-#custom-weather.error { color: @red; }
 
 /* Рабочие столы (xworkspaces аналог) */
 #workspaces button {
@@ -136,7 +127,6 @@ tooltip label {
 
 #custom-power {
 	color: @red;
-	margin: 0 8px;
 }
 
 #bluetooth {

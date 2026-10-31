@@ -15,7 +15,7 @@ window{
 	background-color: @bg;
 	border: 4px;
 	border-color: @bg;
-	border-radius: 4px;
+	border-radius: 8px;
 	//spacing: 16px;
 	x-offset: -8;
 	y-offset: 8;	
@@ -40,14 +40,14 @@ listview{
 	background-color: @bg;
 //	layout: horizontal;
 	lines: 5;
-	border-radius: 16px;
+	border-radius: 8px;
 	
 	
 }
 
 element{
-	border: 2px;
-	border-radius: 4px;
+	border: 4px;
+	border-radius: 8px;
 	border-color: @bg;
 	padding: 4px;
 	background-color: @bg;

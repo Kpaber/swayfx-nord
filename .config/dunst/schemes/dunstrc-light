@@ -13,7 +13,7 @@
     foreground = "#1f2531"
     background = "#eceff4"
     offset = (8, 8)
-    corner_radius = 4
+    corner_radius = 8
     show_indicators = false
     highlight = "#d08770"
 

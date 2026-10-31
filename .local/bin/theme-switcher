@@ -8,7 +8,7 @@ if [ "$THEME" == "prefer-dark" ]; then
 	gsettings set org.gnome.desktop.interface icon-theme Papirus-Light
 	
 	kvantummanager --set KvGnome
-	current-wallpaper
+#	current-wallpaper
 	flatpak override --user --env=GTK_THEME=Adwaita
 	
 	ln -sf ~/.config/foot/schemes/foot-light.ini 			~/.config/foot/foot.ini
@@ -29,7 +29,7 @@ else
 	gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 	
 	kvantummanager --set Nordic
-	current-wallpaper
+#	current-wallpaper
 	flatpak override --user --env=GTK_THEME=Nordic-darker-v40
 
 	ln -sf ~/.config/foot/schemes/foot-dark.ini 			~/.config/foot/foot.ini

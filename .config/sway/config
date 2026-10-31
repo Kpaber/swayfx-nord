@@ -49,19 +49,18 @@ bindsym --to-code $mod+d exec $rofi
 bindsym --to-code $mod+p exec power.sh
 bindsym --to-code $mod+Return exec $term
 
-
 bindsym --to-code $mod+b exec firefox
 bindsym --to-code $mod+c exec rofi-clipboard.sh
+bindsym --to-code $mod+$mod_alt+c exec cliphist wipe
 bindsym --to-code $mod+l exec swaylock
 bindsym --to-code $mod+x exec xfce4-power-manager-settings
 bindsym --to-code $mod+f exec thunar
 bindsym --to-code $mod+v exec pavucontrol
 bindsym --to-code $mod+i exec iwgtk
 bindsym --to-code $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
-bindsym --to-code $mod+s exec grim - | swappy -f -
+bindsym --to-code $mod+s exec grim -c - | swappy -f -
 bindsym --to-code $mod+t exec theme-switcher
 bindsym --to-code $mod+m exec wl-mirror eDP-1
-
 
 bindsym --to-code $mod+q kill
 bindsym --to-code $mod+Shift+c restart
@@ -167,7 +166,7 @@ mode "resize" {
 exec dbus-update-activation-environment --systemd --all
 exec wl-paste -t text --watch cliphist -max-items 50 store
 exec sleep 0.5 && swaylock
-exec current-wallpaper
+exec swaybg -i ~/.local/share/wallpapers/11356529.jpg
 exec waybar
 exec dunst
 exec lxpolkit
@@ -179,31 +178,32 @@ exec tg-ws-proxy
 #---eye-candy-----------------------------------------------------------------
 animation_duration_ms 250
 
-gaps inner 12px
+gaps inner 8px
+#gaps outer 4px
 
 font pango:JetBrainsMono Nerd Font 12
 
 layer_effects "waybar" blur enable; shadows enable
-layer_effects "rofi" blur enable; shadows enable; corner_radius 4
-corner_radius 4
+layer_effects "rofi" blur enable; shadows enable; corner_radius 8
+corner_radius 8
 
-#blur enable
-#blur_xray disable
-#blur_passes 3
-#blur_radius 5
-#blur_noise 0.1
+blur enable
+blur_xray disable
+blur_passes 2
+blur_radius 10
+blur_noise 0.01
 
 shadows enable
 shadows_on_csd enable
 shadow_color #11151c80  
 
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 4
+default_floating_border pixel 4
 
 #class						border		backgr		text		indicator	child_border
 client.focused				#d08770		#d08770 	#1f2531 	#d08770 	#d08770
-client.focused_inactive 	#2e3440  	#d8dee950     #1f2531		#d08770    	#d8dee950
-client.unfocused        	#d8dee950  	#d8dee950     #1f2531  	#d08770    	#d8dee950
+client.focused_inactive 	#2e3440  	#4c566a75     #1f2531		#d08770    	#4c566a75
+client.unfocused        	#4c566a50  	#4c566a75     #1f2531  	#d08770    	#4c566a75
 
 #client.urgent           	#bf616a		#ebcb8b 	#1f2531 	#d8dee9   	#d8dee9
 

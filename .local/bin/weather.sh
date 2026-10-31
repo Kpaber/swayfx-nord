@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
-# Для панели: иконка + температура
-text=$(curl -sf --connect-timeout 3 --max-time 8 "http://wttr.in/?format=%c%t") || text="N/A"
+LOCATION="Барнаул"
 
-# Для tooltip: подробный текстовый блок
-# \n — это перенос строки, который Pango понимает
-tooltip=$(curl -sf --connect-timeout 3 --max-time 8 "http://wttr.in/?format=%l+\n%C\nВлажность:+%h\nВетер:+%w\nДавление:+%P\n&lang=ru") || tooltip="Погода недоступна"
+TEXT=$(curl -s --max-time 4 "http://wttr.in/${LOCATION}?format=%c+%t" 2>/dev/null)
 
-# Экранируем переносы строк для JSON
-tooltip=$(echo "$tooltip" | sed ':a;N;$!ba;s/\n/\\n/g')
+TABLE=$(
+#	curl -s --max-time 6 "http://wttr.in/${LOCATION}?format=%l\n%C+%t\nОщущается+как:%f\nСкорость+ветра:%w\nДавление:%P\nВлажность:%h\nUF-индекс:%u\n&lang=ru" 2>/dev/null
+	curl -s --max-time 8 "http://wttr.in/${LOCATION}?1ATqQF&lang=ru" 2>/dev/null | tail -n +6
+)
 
-echo "{\"text\":\"$text\", \"tooltip\":\"$tooltip\"}"
+
+# Оборачиваем в тег <tt> для сохранения моноширинных колонок в Waybar
+TOOLTIP="<tt>${TABLE}</tt>"
+
+jq -nc \
+  --arg text "$TEXT" \
+  --arg tooltip "$TOOLTIP" \
+  '{"text": $text, "tooltip": $tooltip}'

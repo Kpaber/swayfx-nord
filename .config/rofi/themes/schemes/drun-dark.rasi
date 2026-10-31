@@ -23,7 +23,7 @@ window {
 	border-color: @bg;
 	background-color: @bg;
 	padding: 16px;
-	border-radius: 4px;
+	border-radius: 8px;
 	x-offset: 8;
 	y-offset: 8;	
 }
@@ -44,7 +44,7 @@ inputbar {
 //	width: 50px;
 	border: 8px;
 	border-color: @bg-alt;
-	border-radius: 4px;
+	border-radius: 8px;
 }
 
 entry{
@@ -70,8 +70,8 @@ listview{
 
 element{
 	background-color: @bg;
-	border-radius: 4px;
-	border: 2px;
+	border-radius: 8px;
+	border: 4px;
 	padding: 4px;
 }
 

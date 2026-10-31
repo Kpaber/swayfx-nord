@@ -21,17 +21,17 @@
 			],
 		"modules-right": [
 			"tray",
-			"battery",
 			"wireplumber",
 			"backlight",
 			"sway/language",
 			"bluetooth",
 			"network",
+			"battery",			
 			"custom/power",
 		],
 		"custom/logo": {
 			"format": "",
-			"on-click": "rofi -show drun -location 1 -theme $HOME/.config/rofi/themes/drun.rasi -xoffset 36 -yoffset 44",
+			"on-click": "rofi -show drun -location 1 -theme $HOME/.config/rofi/themes/drun.rasi",
 			"tooltip": false,
 		},
 		"sway/workspaces": {
@@ -46,10 +46,8 @@
 		"custom/weather": {
 			"exec": "weather.sh",
 			"return-type": "json",
-			"interval": 900,
+			"interval": 1800,
 			"tooltip": true,
-			"signal": 8,
-			"on-click": "pkill -RTMIN+8 waybar",
 		},
 		"clock": {
 			"interval": 1,
@@ -68,6 +66,7 @@
 /*			"format-plugged": "󱐋 {capacity}%", */
 			"format-icons": ["", "", "", "", ""],
 		    "tooltip-format": "Осталось: {time}\nМощность: {power} W",
+		    "on-click": "xfce4-power-manager-settings",
 		},
 		"wireplumber": {
 			"format": "{icon} {volume}%",

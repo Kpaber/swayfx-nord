@@ -118,8 +118,8 @@
 - waybar
 - dunst
 - foot
-- kvantummanager
 - Зависимости для корректной работы
+	- adwaita-qt
 	- xdg-desktop-portal-wlr{gtk}
 	- pipewire
 	- iwd
@@ -153,16 +153,14 @@ git clone https://github.com/Kpaber/swayfx-nord.git
 cd swayfx-nord
 stow .
 ```
-- Следующим шагом советую выполнить `theme-switcher`, т.к из-за
+- Следующим шагом советую выполнить `theme-switcher.sh`, т.к из-за
 специфики скрипта смены тем часть конфигов это симлинки.
 - Далее если используете flatpak, необходимо выполнить
 ```bash
-flatpak {--user} override --filesystem=xdg-config/Kvantum:ro \
-						  --filesystem=xdg-config/gtk-3.0:ro \
+flatpak --user override --filesystem=xdg-config/gtk-3.0:ro \
 						  --filesystem=xdg-config/gtk-4.0:ro \
 						  --filesystem=xdg-data/themes:ro \
 						  --filesystem=xdg-data/icons:ro \
-						  --env=QT_STYLE_OVERRIDE=kvantum
 #также установите flatpak версию kvantum
 #теперь все приложения должны выглядеть единообразно
 ```
@@ -190,7 +188,7 @@ flatpak {--user} override --filesystem=xdg-config/Kvantum:ro \
 | `$mod` + `I` | Настройки Wi-Fi (**iwgtk**) |
 | `$mod` + `X` | Настройки питания XFCE |
 | `$mod` + `M` | Трансляция экрана eDP-1 (**wl-mirror**) |
-| `$mod` + `T` | Переключатель тем (**theme-switcher**) |
+| `$mod` + `T` | Переключатель тем (**theme-switcher.sh**) |
 
 **Скриншоты**
 

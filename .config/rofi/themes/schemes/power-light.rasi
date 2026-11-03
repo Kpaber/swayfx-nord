@@ -4,7 +4,7 @@
 //	main: #8C4566  ;
 	main: #d08770;
 	bg: #eceff4;
-	font: "JetBrainsMono NerdFont 14";
+	font: "JetBrainsMono Nerd Font 14";
 	bg-alt: #2e3440 ;
 }
 

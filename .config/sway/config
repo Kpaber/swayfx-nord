@@ -14,7 +14,7 @@ input "type:pointer" {
 input "type:touchpad" {
 	tap enabled
 	natural_scroll enabled
-	dwt disabled
+#	dwt disabled
 }
 
 output HDMI-A-1 resolution 1920x1080 scale 2 position 0 0 
@@ -59,7 +59,7 @@ bindsym --to-code $mod+v exec pavucontrol
 bindsym --to-code $mod+i exec iwgtk
 bindsym --to-code $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
 bindsym --to-code $mod+s exec grim -c - | swappy -f -
-bindsym --to-code $mod+t exec theme-switcher
+bindsym --to-code $mod+t exec theme-switcher.sh
 bindsym --to-code $mod+m exec wl-mirror eDP-1
 
 bindsym --to-code $mod+q kill
@@ -176,14 +176,14 @@ exec tg-ws-proxy
 #--------------------------------------------------------------------------
 
 #---eye-candy-----------------------------------------------------------------
-animation_duration_ms 250
+#animation_duration_ms 250
 
 gaps inner 8px
 #gaps outer 4px
 
 font pango:JetBrainsMono Nerd Font 12
 
-layer_effects "waybar" blur enable; shadows enable
+#layer_effects "waybar" blur enable; shadows enable
 layer_effects "rofi" blur enable; shadows enable; corner_radius 8
 corner_radius 8
 

@@ -57,6 +57,7 @@ tooltip label {
 .modules-right {
 	background-color: @background-alt;
 	border-radius: 8px;
+	margin: 0 8px;
 }
 
 /* Модуль ЛОГО */

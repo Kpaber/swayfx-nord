@@ -1,29 +1,89 @@
 {
 	"logo": {
 		"padding": {
-			"top": 1,
+			"top": 2,
 			"left": 3,
 			//"right": 2,
 		},
 		"color":{
-			"1": "white",
-			"2": "red",
+//			"2": "white",
+			"1": "red",
 		},
+		"type": "small",
 	},
 	"display": {
-		"separator": " ",
+		"separator": " ~ ",
 	},
 	"modules": [	
-		"title",
+//		"title",
 		"separator",
-		
-//hardware submodule
+		{
+			"type": "title",
+			"key": "|  user   |",
+			"keyColor": "cyan",
+			"format": "{user-name}",	
+		},
+
 		{
 			"type": "host",
-			"key": "󰍹",
+			"key": "| 󰍹 host   |",
 			"keyColor": "blue",
 		},
 		{
+			"type": "uptime",
+			"key": "| 󰅐 uptime |",
+			"keyColor": "green",	
+		},
+		{
+			"type": "os",
+			"key": "|  distro |",
+			"keyColor": "red",
+		},
+		{
+			"type": "kernel",
+			"key": "|  kernel |",
+			"keyColor": "magenta",
+		},
+		{
+			"type": "packages",
+			"key": "|  pkgs   |",
+			"keyColor": "yellow",
+		},
+		{
+			"type": "wm",
+			"key": "| 󰙀 wm     |",
+			"keyColor": "cyan",
+		},
+		{
+			"type": "terminal",
+			"key": "|  term   |",
+			"keyColor": "green",
+		},		
+		{
+			"type": "disk",
+			"key": "|  disk   |",
+			"keyColor": "yellow",
+		},
+		"separator",
+		{
+			"type": "colors",
+			"key": "|  colors |",
+			"keyColor": "magenta",
+			"symbol": "circle",
+		},
+		"separator",
+		
+	],
+}
+
+		
+//hardware submodule
+/*		{
+			"type": "host",
+			"key": "󰍹",
+			"keyColor": "blue",
+		},*/
+/*		{
 			"type": "cpu",
 			"key": "├󰍛",
 			"keyColor": "blue",
@@ -33,20 +93,12 @@
 			"key": "├󰑭",
 			"keyColor": "blue",
 		},
-/*		{
-			"type": "swap",
-			"key": "├󰑭",
-		},*/
 		
 		{
 			"type": "gpu",
 			"key": "├󰢮",
 			"keyColor": "blue",
 		},
-/*		{
-			"type": "gpudriver",
-			"key": "",
-		},*/
 		{
 			"type": "disk",
 			"key": "└",
@@ -123,4 +175,9 @@
 		},
 		
 	],
-}
+}*/
+
+
+
+
+

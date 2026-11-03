@@ -9,8 +9,10 @@ if [ "$(tty)" = "/dev/tty1" ]; then
 	export ELECTRON_OZONE_PLATFORM_HINT=auto
 	export SDL_VIDEODRIVER=wayland,x11
 	export _JAVA_AWT_WM_NONREPARENTING=1
-	export QT_QPA_PLATFORMTHEME=qt6ct
+	export QT_QPA_PLATFORMTHEME=gtk3
 
 	#exec sway
-	exec sway -d > ~/.sway.log
+	sway -d > ~/.sway.log
+	echo ""
+	setfont '/usr/share/consolefonts/Uni3-Terminus24x12.psf.gz'
 fi

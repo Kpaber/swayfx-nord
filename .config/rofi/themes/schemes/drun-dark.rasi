@@ -11,7 +11,7 @@ configuration {
 	bg-alt : #3b4252;
 	txt : #C5C5C6;
 //	main : #334f7d;
-	font: "JetBrains NerdFont Mono 14";
+	font: "JetBrainsMono Nerd Font 14";
 	bg: #2e3440;
 	main : #d08770;
 }

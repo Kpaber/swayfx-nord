@@ -1,0 +1,47 @@
+#!/usr/bin/bash
+
+THEME=$(gsettings get org.gnome.desktop.interface color-scheme | tr -d "'")
+
+if [ "$THEME" == "prefer-dark" ]; then
+	gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+	gsettings set org.gnome.desktop.interface color-scheme prefer-light
+	gsettings set org.gnome.desktop.interface icon-theme Papirus-Light
+	
+#	kvantummanager --set KvGnome
+#	current-wallpaper
+#	flatpak override --user --env=GTK_THEME=Adwaita
+	
+	ln -sf ~/.config/foot/schemes/foot-light.ini 			~/.config/foot/foot.ini
+	ln -sf ~/.config/waybar/schemes/style-light.css 		~/.config/waybar/style.css
+	ln -sf ~/.config/rofi/themes/schemes/drun-light.rasi 	~/.config/rofi/themes/drun.rasi
+	ln -sf ~/.config/rofi/themes/schemes/power-light.rasi 	~/.config/rofi/themes/power.rasi
+	ln -sf ~/.config/rofi/themes/schemes/config-light.rasi 	~/.config/rofi/themes/config.rasi
+	ln -sf ~/.config/dunst/schemes/dunstrc-light 			~/.config/dunst/dunstrc
+	rm ~/.config/gtk-4.0/gtk.css
+	
+	pkill foot -SIGUSR2
+	pkill waybar -SIGUSR2
+	dunstctl reload
+	notify-send 'Светлая тема' включена
+else
+	gsettings set org.gnome.desktop.interface gtk-theme Nordic-darker-v40
+	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+	gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
+	
+#	kvantummanager --set Nordic
+#	current-wallpaper
+#	flatpak override --user --env=GTK_THEME=Nordic-darker-v40
+
+	ln -sf ~/.config/foot/schemes/foot-dark.ini 			~/.config/foot/foot.ini
+	ln -sf ~/.config/waybar/schemes/style-dark.css 			~/.config/waybar/style.css
+	ln -sf ~/.config/rofi/themes/schemes/drun-dark.rasi 	~/.config/rofi/themes/drun.rasi
+	ln -sf ~/.config/rofi/themes/schemes/power-dark.rasi 	~/.config/rofi/themes/power.rasi
+	ln -sf ~/.config/rofi/themes/schemes/config-dark.rasi 	~/.config/rofi/themes/config.rasi
+	ln -sf ~/.config/dunst/schemes/dunstrc-dark 			~/.config/dunst/dunstrc
+	ln -sf ~/.config/gtk-4.0/schemes/gtk-dark.css ~/.config/gtk-4.0/gtk.css 
+
+	pkill foot -SIGUSR1
+	pkill waybar -SIGUSR2
+	dunstctl reload
+	notify-send 'Темная тема' включена	
+fi

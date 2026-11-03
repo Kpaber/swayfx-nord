@@ -49,11 +49,6 @@
 │   │   ├── schemes
 │   │   │   └── gtk-dark.css -> ~/.local/share/themes/Nordic-darker-v40/gtk-4.0/gtk.css
 │   │   └── settings.ini
-│   ├── Kvantum
-│   │   ├── kvantum.kvconfig
-│   │   └── Nordic
-│   │       ├── Nordic.kvconfig
-│   │       └── Nordic.svg
 │   ├── rofi
 │   │   ├── config.rasi
 │   │   └── themes
@@ -161,7 +156,6 @@ flatpak --user override --filesystem=xdg-config/gtk-3.0:ro \
 						  --filesystem=xdg-config/gtk-4.0:ro \
 						  --filesystem=xdg-data/themes:ro \
 						  --filesystem=xdg-data/icons:ro \
-#также установите flatpak версию kvantum
 #теперь все приложения должны выглядеть единообразно
 ```
 - Если не устраивает системный шрифт, его легко поменять через nwg-look

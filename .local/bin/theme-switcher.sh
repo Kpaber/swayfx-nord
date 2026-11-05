@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 THEME=$(gsettings get org.gnome.desktop.interface color-scheme | tr -d "'")
 

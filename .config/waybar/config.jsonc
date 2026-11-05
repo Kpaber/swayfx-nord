@@ -60,6 +60,20 @@
         		},
            	},
 		},
+/*		"mpris": {
+			"format": "{player_icon} {dynamic}",
+			"format-paused": "{status_icon} <i>{dynamic}</i>",
+			"dynamic-order": ["title","position", "length"],
+			"player-icons": {
+				"default": "▶",
+				"kew": "🎵"
+			},
+			"status-icons": {
+				"paused": "⏸"
+			},
+			"ignored-players": ["firefox"],
+//			"too
+		},*/
 		"battery": {
 			"format": "{icon} {capacity}%",
 			"format-charging": "󱐋 {capacity}%",

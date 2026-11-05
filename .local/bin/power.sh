@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 options="⏻ Выключение\n󰑓 Перезагрузка\n Ожидание\n Гибернация\n Выход"
 #options="⏻ \n󰑓 \n \n \n "

@@ -5,6 +5,8 @@
 ![фото](.config/sway/img/swappy-20261031_223931.png)
 ![фото](.config/sway/img/swappy-20261031_224019.png)
 ![фото](.config/sway/img/swappy-20261031_224025.png)
+![фото](.config/sway/img/swappy-20261106_124454.png)
+
 ![фото](.config/sway/img/swappy-20261031_224455.png)
 ![фото](.config/sway/img/swappy-20261031_224143.png)
 ![фото](.config/sway/img/swappy-20261031_224535.png)
@@ -63,22 +65,7 @@
 │   │           ├── power-dark.rasi
 │   │           └── power-light.rasi
 │   ├── sway
-│   │   ├── config
-│   │   └── img
-│   │       ├── swappy-20261031_223931.png
-│   │       ├── swappy-20261031_224004.png
-│   │       ├── swappy-20261031_224019.png
-│   │       ├── swappy-20261031_224025.png
-│   │       ├── swappy-20261031_224033.png
-│   │       ├── swappy-20261031_224119.png
-│   │       ├── swappy-20261031_224130.png
-│   │       ├── swappy-20261031_224136.png
-│   │       ├── swappy-20261031_224143.png
-│   │       ├── swappy-20261031_224150.png
-│   │       ├── swappy-20261031_224442.png
-│   │       ├── swappy-20261031_224455.png
-│   │       ├── swappy-20261031_224535.png
-│   │       └── swappy-20261031_224544.png
+│   │   └── config
 │   ├── swaylock
 │   │   └── config
 │   └── waybar
@@ -91,11 +78,12 @@
 ├── .gtkrc-2.0
 ├── .local
 │   ├── bin
-│   │   ├── current-wallpaper
-│   │   ├── dunst-history-rofi.sh
 │   │   ├── power.sh
 │   │   ├── rofi-clipboard.sh
-│   │   ├── theme-switcher
+│   │   ├── theme-switcher.sh
+│   │   ├── gamma.sh
+│   │   ├── volume.sh
+│   │   ├── brightness.sh
 │   │   └── weather.sh
 │   └── share
 │       ├── fonts
@@ -103,7 +91,7 @@
 │       ├── themes
 │       │   └── Nordic-darker-v40
 │       └── wallpapers
-│           ├── 11356529.jpg
+│           └── 11356529.jpg
 └── README.md
 ```
 ## Программы(зависимости)
@@ -183,7 +171,7 @@ flatpak --user override --filesystem=xdg-config/gtk-3.0:ro \
 | `$mod` + `X` | Настройки питания XFCE |
 | `$mod` + `M` | Трансляция экрана eDP-1 (**wl-mirror**) |
 | `$mod` + `T` | Переключатель тем (**theme-switcher.sh**) |
-
+| `$mod` + `G` | Переключатель защиты глаз (**gamma.sh**) |
 **Скриншоты**
 
 | Комбинация клавиш | Действие |

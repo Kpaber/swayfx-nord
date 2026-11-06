@@ -14,7 +14,7 @@ input "type:pointer" {
 input "type:touchpad" {
 	tap enabled
 	natural_scroll enabled
-	dwt disabled
+#	dwt disabled
 }
 
 output HDMI-A-1 resolution 1920x1080 scale 2 position 0 0 
@@ -166,8 +166,8 @@ mode "resize" {
 #---autostart--------------------------------------------------------------
 exec dbus-update-activation-environment --systemd --all
 exec wl-paste -t text --watch cliphist -max-items 50 store
-exec sleep 0.5 && swaylock
 exec swaybg -i ~/.local/share/wallpapers/11356529.jpg
+exec sleep 0.5 && swaylock
 exec waybar
 exec dunst
 exec lxpolkit

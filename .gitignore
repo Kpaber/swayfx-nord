@@ -1,10 +1,7 @@
-.bashrc
-.bash_aliases
 .uuid
 bookmarks
 workspaces
 app-list.md
-.gitignore
 dunstrc
 foot.ini
 config.rasi

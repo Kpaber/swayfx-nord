@@ -172,6 +172,7 @@ flatpak --user override --filesystem=xdg-config/gtk-3.0:ro \
 | `$mod` + `M` | Трансляция экрана eDP-1 (**wl-mirror**) |
 | `$mod` + `T` | Переключатель тем (**theme-switcher.sh**) |
 | `$mod` + `G` | Переключатель защиты глаз (**gamma.sh**) |
+
 **Скриншоты**
 
 | Комбинация клавиш | Действие |

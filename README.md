@@ -1,17 +1,19 @@
 # **Мои дотфайлы для композитора swayfx**
 ![фото](.config/sway/img/swappy-20261031_224544.png)
 ![фото](.config/sway/img/swappy-20261031_224442.png)
-![фото](.config/sway/img/swappy-20261031_224004.png)
-![фото](.config/sway/img/swappy-20261031_223931.png)
-![фото](.config/sway/img/swappy-20261031_224019.png)
-![фото](.config/sway/img/swappy-20261031_224025.png)
-![фото](.config/sway/img/swappy-20261106_124454.png)
+<details>
+	<summary><b><Ещё скриншоты></b></summary>
+	![фото](.config/sway/img/swappy-20261031_224004.png)
+	![фото](.config/sway/img/swappy-20261031_223931.png)
+	![фото](.config/sway/img/swappy-20261031_224019.png)
+	![фото](.config/sway/img/swappy-20261031_224025.png)
+	![фото](.config/sway/img/swappy-20261106_124454.png)
 
-![фото](.config/sway/img/swappy-20261031_224455.png)
-![фото](.config/sway/img/swappy-20261031_224143.png)
-![фото](.config/sway/img/swappy-20261031_224535.png)
+	![фото](.config/sway/img/swappy-20261031_224455.png)
+	![фото](.config/sway/img/swappy-20261031_224143.png)
+	![фото](.config/sway/img/swappy-20261031_224535.png)
 *[Остальные скриншоты](https://github.com/Kpaber/swayfx-nord/tree/main/.config/sway/img)*
-
+</details>
 Этим "*окружением*" я пользуюсь на каждодневной основе и стараюсь
 сохранять его минималистичность и простоту(устройства). Конфиги довольно просто
 установить и оно не требует много ресурсов. 

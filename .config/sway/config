@@ -52,7 +52,8 @@ bindsym --to-code $mod+Return exec $term
 bindsym --to-code $mod+b exec firefox
 bindsym --to-code $mod+c exec rofi-clipboard.sh
 bindsym --to-code $mod+$mod_alt+c exec cliphist wipe
-bindsym --to-code $mod+l exec swaylock
+#bindsym --to-code $mod+l exec swaylock
+bindsym --to-code $mod+l exec gtklock
 bindsym --to-code $mod+x exec xfce4-power-manager-settings
 bindsym --to-code $mod+f exec thunar
 bindsym --to-code $mod+v exec pavucontrol
@@ -166,8 +167,9 @@ mode "resize" {
 #---autostart--------------------------------------------------------------
 exec dbus-update-activation-environment --systemd --all
 exec wl-paste -t text --watch cliphist -max-items 50 store
+exec gtklock -d
+exec swayidle -w before-sleep 'gtklock -d'
 exec swaybg -i ~/.local/share/wallpapers/11356529.jpg
-exec sleep 0.5 && swaylock
 exec waybar
 exec dunst
 exec lxpolkit

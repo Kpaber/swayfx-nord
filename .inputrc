@@ -3,7 +3,7 @@ set completion-ignore-case on
 
 # Считать дефис (-) и нижнее подчеркивание (_) эквивалентными при комплите.
 # Работает только когда включен completion-ignore-case (my-script == my_script)
-#set completion-map-case on
+set completion-map-case on
 
 # Показывать список вариантов сразу по первому нажатию Tab, если вариантов несколько
 # (по дефолту Bash сначала просто пищит и ждет второго нажатия Tab)

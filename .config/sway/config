@@ -165,9 +165,9 @@ mode "resize" {
 #--------------------------------------------------------------------------
 
 #---autostart--------------------------------------------------------------
+exec gtklock -d
 exec dbus-update-activation-environment --systemd --all
 exec wl-paste -t text --watch cliphist -max-items 50 store
-exec gtklock -d
 exec swayidle -w before-sleep 'gtklock -d'
 exec swaybg -i ~/.local/share/wallpapers/11356529.jpg
 exec waybar
@@ -185,7 +185,7 @@ gaps inner 8px
 #gaps outer 4px
 #smart_gaps enable
 
-default_dim_inactive 0.1
+#default_dim_inactive 0.1
 
 font pango:JetBrainsMono Nerd Font 12
 
@@ -216,7 +216,6 @@ client.unfocused        	#4c566a50  	#4c566a75     #1f2531  	#d08770    	#4c566a
 for_window [app_id=".*gamescope.*"] blur disable; shadows disable
 
 #---rules------------------------------------------------------------------------
-
 for_window [app_id="xfce4-power-manager-settings"] floating enable
 for_window [app_id="pavucontrol"]  			floating enable, resize set 800 504, move position 952 -4
 for_window [class="AmneziaVPN"]  			floating enable

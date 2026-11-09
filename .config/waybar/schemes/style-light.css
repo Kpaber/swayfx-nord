@@ -73,7 +73,7 @@ tooltip label {
 }
 
 #workspaces button.focused {
-	color: @main;
+	color: @cyan;
 /*	border-bottom: 3px solid @main;  Нижнее подчеркивание активного */
 }
 

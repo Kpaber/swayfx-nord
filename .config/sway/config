@@ -18,7 +18,7 @@ input "type:touchpad" {
 }
 
 output HDMI-A-1 resolution 1920x1080 scale 2 position 0 0 
-output eDP-1 resolution 1920x1080 position 960 0
+output eDP-1 resolution 1920x1080 scale 1 position 960 0
 #--------------------------------------------------------------------------------------
 
 #---keybinds---------------------------------------------------------------------------
@@ -59,6 +59,7 @@ bindsym --to-code $mod+f exec thunar
 bindsym --to-code $mod+v exec pavucontrol
 bindsym --to-code $mod+i exec iwgtk
 bindsym --to-code $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
+
 bindsym --to-code $mod+s exec grim -c - | swappy -f -
 bindsym --to-code $mod+t exec theme-switcher.sh
 bindsym --to-code $mod+m exec wl-mirror eDP-1
@@ -189,8 +190,8 @@ gaps inner 8px
 
 font pango:JetBrainsMono Nerd Font 12
 
-#layer_effects "waybar" blur enable; shadows enable
-layer_effects "rofi" blur enable; shadows enable; corner_radius 8
+layer_effects "rofi" shadows enable; corner_radius 8
+layer_effects "notifications" shadows enable; corner_radius 8
 corner_radius 8
 
 blur enable

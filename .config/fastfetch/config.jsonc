@@ -62,9 +62,22 @@
 			"keyColor": "green",
 		},		
 		{
+			"type": "memory",
+			"key": "| 󰑭 ram    |",
+			"keyColor": "blue",
+		},
+		{
 			"type": "disk",
 			"key": "|  disk   |",
 			"keyColor": "yellow",
+		},
+		{
+    		"type": "disk",
+    		"key": "| 󰃰 os age |",
+    		"keyColor": "red",
+    		"folders": "/",
+    		// Выбирай любой удобный формат ниже:
+    		"format": "{days} days"
 		},
 		"separator",
 		{

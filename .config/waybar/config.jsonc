@@ -38,10 +38,10 @@
 			"disable-scroll": true,
 			"all-outputs": true,
 			"format": "{icon}",
-			"format-icons": {
+			/*"format-icons": {
 				"default": "󰝥",
 				"focused": "󰜗",
-			}
+			}*/
 		},
 		"custom/weather": {
 			"exec": "weather.sh",

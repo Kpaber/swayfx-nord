@@ -1,22 +1,23 @@
 # **Мои дотфайлы для композитора swayfx**
-![фото](.config/sway/img/swappy-20261031_224544.png)
-![фото](.config/sway/img/swappy-20261031_224442.png)
-![фото](.config/sway/img/swappy-20261109_095937.png)
+![фото](.config/sway/img/swappy-20261112_180147.png)
+![фото](.config/sway/img/swappy-20261112_180135.png)
+![фото](.config/sway/img/swappy-20261112_180604.png)
 <details>
 <summary><b>Ещё скриншоты</b></summary>
 <br>	
 
-![фото](.config/sway/img/swappy-20261031_224004.png)
-![фото](.config/sway/img/swappy-20261031_223931.png)
-![фото](.config/sway/img/swappy-20261031_224019.png)
-![фото](.config/sway/img/swappy-20261031_224025.png)
-![фото](.config/sway/img/swappy-20261106_124454.png)
+![фото](.config/sway/img/swappy-20261112_180214.png)
+![фото](.config/sway/img/swappy-20261112_180711.png)
+![фото](.config/sway/img/swappy-20261112_180835.png)
+![фото](.config/sway/img/swappy-20261112_180850.png)
 
-![фото](.config/sway/img/swappy-20261109_100017.png)
-![фото](.config/sway/img/swappy-20261031_224455.png)
-![фото](.config/sway/img/swappy-20261031_224143.png)
-![фото](.config/sway/img/swappy-20261031_224535.png)
-*[Остальные скриншоты](https://github.com/Kpaber/swayfx-nord/tree/main/.config/sway/img)*
+![фото](.config/sway/img/swappy-20261112_180153.png)
+![фото](.config/sway/img/swappy-20261112_180127.png)
+![фото](.config/sway/img/swappy-20261112_180546.png)
+![фото](.config/sway/img/swappy-20261112_180219.png)
+![фото](.config/sway/img/swappy-20261112_180712.png)
+![фото](.config/sway/img/swappy-20261112_180823.png)
+![фото](.config/sway/img/swappy-20261112_180857.png)
 	
 </details>
 
@@ -102,41 +103,47 @@
 │           └── 11356529.jpg
 └── README.md
 ```
-## Программы(зависимости)
-- [swayfx](https://github.com/wlrfx/swayfx)
-- [swaylock-effects](https://github.com/hboetes/swaylock-effects)
-- rofi
-- waybar
-- dunst
-- foot
-- Зависимости для корректной работы
-	- adwaita-qt
-	- xdg-desktop-portal-wlr{gtk}
-	- pipewire
-	- iwd
-	- stow
-	- cliphist
+## Пакеты которые я использую
+- Пакеты непосредственно для райса
+	- [swayfx](https://github.com/wlrfx/swayfx)
+	- gtklock
+	- rofi
+	- waybar
+	- dunst
+	- foot
 	- autotiling
-	- jq
-- И лично я использую
-	- xfce4-power-manager
+	- JetBrainsMono Nerd Font
+- Пакеты реализующие важный функционал
+	- stow
+	- adwaita-qt
+	- xdg-desktop-portal-wlr
+	- pipewire + pavucontrol
+	- iwd + iwgtk
 	- blueman-manager
-	- iwgtk
-	- pavucontrol
+	- xfce4-power-manager + power-profiles-daemon
+	- gammastep
 	- grim + slurp + swappy
+- Прочие пакеты
 	- thunar
 	- mpv
+	- imv
 	- kew
+	- cliphist
+	- jq
+	- btop
+	- fastfetch
 
 ## Перед установкой важно сказать, что это сугубо личные дотфайлы
 Я делал их для себя, под свое использование, под свой сетап, поэтому вам,
-вероятно, придется поправить конфиги под себя и под свои нужды.
+вероятно, будет неудобно и/или ничего не заработает и вам **придется** поправить 
+конфиги под себя.
 
 ## Установка
-- Для начала вам стоит установить swayfx, swaylock-effects, rofi, etc
-в ваш дистрибутив доступным вам методом. В случае debian, местами, это сборка из
-исходников. 
-- Добавьте в $PATH путь $HOME/.local/bin, если еще нет
+- Для начала вам стоит установить swayfx, gtklock, rofi, etc
+в ваш дистрибутив доступным вам методом. В случае debian swayfx собирается\
+из исходников
+- Настройки autologin и autostart можно подсмотреть [тут](https://gitlab.com/prolinux410/owl_dots/-/wikis/Autostart_wm)
+иначе: перенесите переменные из .bash_profile в такое место, что читается вашим менеджером сессий.
 - Склонируйте репозиторий
 ```bash
 git clone https://github.com/Kpaber/swayfx-nord.git
@@ -144,8 +151,9 @@ git clone https://github.com/Kpaber/swayfx-nord.git
 cd swayfx-nord
 stow .
 ```
-- Следующим шагом советую выполнить `theme-switcher.sh`, т.к из-за
-специфики скрипта смены тем часть конфигов это симлинки.
+- Следующим шагом советую выполнить `theme-switcher.sh`. Как видно по
+структуре репозитория, это необходимо для создания симлинков текущей
+темы оформления.
 - Далее если используете flatpak, необходимо выполнить
 ```bash
 flatpak --user override --filesystem=xdg-config/gtk-3.0:ro \
@@ -246,9 +254,6 @@ flatpak --user override --filesystem=xdg-config/gtk-3.0:ro \
 ## Известные проблемы
 - Многочисленные баги анимаций
 	- решается их отключением в .config/sway/config
-- Проблемы с расположений игр в сетке воркспейса
+- Проблемы с расположением игр в сетке воркспейса
 	- установите gamescope или cage(для игр вроде Project Zomboid, которые
-	тормозят через gamescope. Просто запустите steam внутри cage)
-- Перестают отображаться окна на внешнем мониторе после гибернации или 
-в этом духе
-	- виноваты анимации, но я предпочитаю переткнуть монитор
+	тормозят через gamescope. Просто запустите `cage -- steam`)

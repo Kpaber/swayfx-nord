@@ -63,7 +63,7 @@
 		},		
 		{
 			"type": "memory",
-			"key": "| 󰑭 ram    |",
+			"key": "|   ram   |",
 			"keyColor": "blue",
 		},
 		{
@@ -76,7 +76,6 @@
     		"key": "| 󰃰 os age |",
     		"keyColor": "red",
     		"folders": "/",
-    		// Выбирай любой удобный формат ниже:
     		"format": "{days} days"
 		},
 		"separator",

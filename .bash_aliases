@@ -13,6 +13,7 @@ alias update='sudo apt update && apt list --upgradable && sudo apt upgrade && fl
 
 alias sas='sudo apt search'
 alias sar='sudo apt autoremove'
+alias sai='sudo apt install'
 
 alias gs='git status'
 alias gf='git fetch'

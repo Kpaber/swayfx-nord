@@ -68,12 +68,14 @@ tooltip label {
 
 /* Рабочие столы (xworkspaces аналог) */
 #workspaces button {
-	color: @background-alt2;
+	color: @text;
 	padding: 0 4px;
+	border-radius: 8px;
 }
 
 #workspaces button.focused {
-	color: @main;
+	background-color: @main;
+	padding: 0 8px;
 /*	border-bottom: 3px solid @main;  Нижнее подчеркивание активного */
 }
 
